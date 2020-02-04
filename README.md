@@ -3,9 +3,22 @@
 ## 介绍
 awtk-ios
 
-## 安装教程
+## 准备
+
+* 创建目录
+
+```
+cd ~/Documents/
+mkdir xcode
+cd xcode
+```
 
 * 下载[SDL2-2.0.10](https://www.libsdl.org/release/SDL2-2.0.10.zip)
+
+```
+http://www.libsdl.org/release/SDL2-2.0.10.zip
+unzip SDL2-2.0.10.zip
+```
 
 * 下载awtk-ios
 
@@ -16,7 +29,7 @@ git clone https://github.com/zlgopen/awtk-ios.git
 
 ## 运行
 
-用 xcode 打开 demoui/demoui.xcodeproj
+用 xcode 打开 awtk-ios/demoui/demoui.xcodeproj
 
 ## 使用文档
 
