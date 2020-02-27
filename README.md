@@ -1,38 +1,49 @@
 # awtk-ios
 
-## 介绍
-awtk-ios
+awtk ios 移植
 
-## 准备
+> 编译awtk ios版本，需要MacOS 电脑，并安装Xcode。
 
-* 创建目录
-
-```
-cd ~/Documents/
-mkdir xcode
-cd xcode
-```
-
-* 下载[SDL2-2.0.10](https://www.libsdl.org/release/SDL2-2.0.10.zip)
+## 下载 awtk 和 awtk-ios 源码
 
 ```
-http://www.libsdl.org/release/SDL2-2.0.10.zip
-unzip SDL2-2.0.10.zip
-```
-
-* 下载awtk-ios
-
-```
+git clone https://github.com/zlgopen/awtk.git
 git clone https://github.com/zlgopen/awtk-ios.git
 ```
 
+## 创建并编译 demoui 的工程
 
-## 运行
+* 进入awtk-ios
 
-用 xcode 打开 awtk-ios/demoui/demoui.xcodeproj
+```
+cd awtk-ios 
+```
 
-## 使用文档
+* 创建CMakefile工程
 
-* [用Xcode 编译iOS版本AWTK](docs/awtk_ios.md)
+```
+python create_project.py ../awtk/demos/demoui_build.json
+```
 
-* [在iOS平台创建awtk应用程序](docs/awtk_demoui.md)
+* 生成Xcode工程
+
+```
+cd build/demoui && ./generate-project.sh
+```
+
+* 编译工程
+
+生成的Xcode工程文件为Xcode/awtk.xcodeproj，用Xcode打开即可。
+
+```
+open Xcode/awtk.xcodeproj
+```
+
+
+## 创建并编译自己的工程
+
+创建并编译自己的工程需要先写一个配置文件，请参考 [平台编译配置](https://github.com/zlgopen/awtk/blob/master/docs/build_config.md)
+
+后续过程和 demoui 完全一样。
+
+
